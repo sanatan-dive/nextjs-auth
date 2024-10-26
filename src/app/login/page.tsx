@@ -43,18 +43,6 @@ export default function LoginPage() {
         }
     }, [user]);
 
-    useEffect(() => {
-        const handleKeyDown = (event: KeyboardEvent) => {
-            if (event.key === "Enter") {
-                onLogin();
-            }
-            window.addEventListener("keydown",handleKeyDown);
-        }
-        return ()=>{
-            window.removeEventListener("keydown",handleKeyDown)
-        };
-    },[setUser])
-
     return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
         <Toaster/>
