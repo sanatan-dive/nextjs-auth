@@ -43,6 +43,18 @@ export default function SignupPage() {
         }
     }, [user]);
 
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === "Enter") {
+                onSignup();
+            }
+            window.addEventListener("keydown",handleKeyDown);
+        }
+        return ()=>{
+            window.removeEventListener("keydown",handleKeyDown)
+        };
+    },[setUser])
+
 
     return (
         <div> <Toaster/>
