@@ -47,7 +47,7 @@ export default function SignupPage() {
     return (
         <div> <Toaster/>
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-        <h1>{loading ? "Processing" : "Signup"}</h1>
+        
         <hr />
         <label htmlFor="username">username</label>
         <input 
@@ -78,7 +78,7 @@ export default function SignupPage() {
             />
             <button
             onClick={onSignup}
-            className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600">{buttonDisabled ? "No signup" : "Signup"}</button>
+            className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600">{buttonDisabled ? "No signup" : `${loading ? "Processing" : "Signup"}`}</button>
             <Link href="/login">Visit login page</Link>
         </div>
         </div>
