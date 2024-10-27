@@ -7,12 +7,12 @@ import toast, { Toaster } from "react-hot-toast";
 export default function ForgotPassword() {
 
     const [email, setEmail] = useState("");
-    const [loading, setLoading] = useState(false)
+  
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
         try {
-            setLoading(true)
+            
             const response = await axios.post("/api/users/forgotPassword", { email });
             if (response.data.message) {
                 toast.success(response.data.message)
@@ -22,9 +22,7 @@ export default function ForgotPassword() {
         } catch (error: any) {
             toast.error(error.response.data.error);
             console.log(error);
-        } finally {
-            setLoading(false)
-        }
+        } 
     }
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">

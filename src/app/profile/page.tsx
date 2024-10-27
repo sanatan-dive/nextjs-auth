@@ -1,6 +1,6 @@
 "use client";
 
-import { log } from "console";
+
 import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
