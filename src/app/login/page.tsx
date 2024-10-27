@@ -16,7 +16,7 @@ export default function LoginPage() {
         password: "",
        
     })
-    /* eslint-disable @typescript-eslint/no-unused-vars */
+
     const [buttonDisabled, setButtonDisabled] = React.useState(false);
     const [loading, setLoading] = React.useState(false);
 
